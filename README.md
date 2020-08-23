@@ -1,1 +1,1 @@
-# django-auther
+# Django Auther
