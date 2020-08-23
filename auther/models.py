@@ -16,7 +16,7 @@ class Role(models.Model):
 
 class User(models.Model):
     name = models.TextField(null=False)
-    username = models.TextField(null=False)
+    username = models.TextField(unique=True, null=False)
     password = models.BinaryField(null=False)
     pic_id = models.TextField(null=True)
     roles = models.ManyToManyField(Role)
