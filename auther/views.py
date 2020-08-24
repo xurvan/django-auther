@@ -1,9 +1,9 @@
-import bcrypt
 import json
 from base64 import b85encode
-from django.http import HttpResponseBadRequest, JsonResponse
-from django.shortcuts import render
 from os import urandom
+
+import bcrypt
+from django.http import HttpResponseBadRequest, JsonResponse
 from redisary import Redisary
 
 from auther.models import User

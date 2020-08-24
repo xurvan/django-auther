@@ -1,5 +1,6 @@
-import bcrypt
 import json
+
+import bcrypt
 from redisary import Redisary
 
 
