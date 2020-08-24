@@ -10,7 +10,7 @@ class AuthMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
-        if request.method == 'POST' and request.json.get('password'):
+        if 'login' not in request.path and request.json.get('password'):
             request.json['password'] = bcrypt.hashpw(request.json['password'].encode('utf-8'), bcrypt.gensalt())
 
         request.user = None
