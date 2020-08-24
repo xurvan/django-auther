@@ -1,7 +1,7 @@
 import bcrypt
 from django.core.management.base import BaseCommand, CommandError
 
-from api.models import Profile, Role
+from auther.models import User, Role
 
 
 class Command(BaseCommand):
@@ -27,7 +27,7 @@ class Command(BaseCommand):
             raise CommandError('Password is required')
 
         password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-        user = Profile(name=name, username=username, password=password)
+        user = User(name=name, username=username, password=password)
         user.save(force_insert=True)
         self.stdout.write(self.style.SUCCESS(f'New user added to database ({username})'))
 

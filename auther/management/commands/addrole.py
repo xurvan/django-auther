@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand, CommandError
 
-from api.models import Role, Perm
+from auther.models import Role, Perm
 
 
 class Command(BaseCommand):
