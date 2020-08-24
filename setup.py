@@ -26,7 +26,7 @@ setup(
         'Issue tracker': f'https://github.com/{owner}/{name}/issues',
     },
     packages=find_packages(),
-    install_requires=['bcrypt', 'redisary'],
+    install_requires=['django', 'bcrypt', 'redisary'],
     python_requires='>=3.6',
     zip_safe=False,
     classifiers=[
